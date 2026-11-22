@@ -2,9 +2,11 @@
 
 Um visualizador de dados escrito em Rust com [raylib](https://github.com/raylib-rs/raylib-rs), inspirado em um [vídeo do 3Blue1Brown](https://youtu.be/EK32jo7i5LQ?si=ZehKKW_4DroxbZxK) e em um sonho que tive.
 
-<p align="center">
+<div align="center">
   <img src="./assets/demo.gif" alt="Espiral girando" width="500">
-</p>
+  
+  <samp>(simulação acelerada)</samp>
+</div>
 
 O programa exibe padrões entre números primos numa espécie de espiral arquimediana. Cada primo `p` é desenhado nas coordenadas polares `(r, θ) = (p, p)`.
 

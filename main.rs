@@ -16,7 +16,7 @@ const INITIAL_ZOOM_LEVEL          		: f64   = 0.67;
 const MIN_ZOOM		              		: f64   = 0.000056;
 const MAX_ZOOM	             			: f64   = 1000.0;
 
-const ROTATION_SPEED		        	: f64   = 0.0016;
+const ROTATION_SPEED		        	: f64   = 0.0004;
 const INITIAL_ROTATION_OFFSET	    	: f64   = 0.0;
 
 fn bool_pt(boolean: bool) -> &'static str {
