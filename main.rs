@@ -118,6 +118,8 @@ enum Theme {
     Default,
     Knight,
     NieR,
+    Echidna,
+    Solarized,
 }
 
 impl Theme {
@@ -125,11 +127,14 @@ impl Theme {
         match self {
             Theme::Default => Theme::Knight,
             Theme::Knight => Theme::NieR,
-            Theme::NieR => Theme::Default,
+            Theme::NieR => Theme::Echidna,
+            Theme::Echidna => Theme::Solarized,
+            Theme::Solarized => Theme::Default,
         }
     }
 
     fn colors(self) -> (Color, Color, Color, Color) {
+                    // fg, bg, opts, hints 愛しています :3q
         match self {
             Theme::Default => (
                 Color::new(102, 191, 255, 255),
@@ -149,6 +154,18 @@ impl Theme {
                 Color::new(25, 22, 6, 255),
                 Color::new(7, 102, 120, 255),
             ),
+            Theme::Echidna => (
+                Color::new(204, 255, 153, 255),
+                Color::new(17, 16, 16, 255),
+                Color::new(242, 242, 242, 255),
+                Color::new(126, 143, 126, 255),
+            ),
+            Theme::Solarized => (
+                Color::new(65, 199, 185, 255),
+                Color::new(0, 20, 25, 255),
+                Color::new(173, 188, 188, 255),
+                Color::new(24, 73, 86, 255),
+            ),
         }
     }
 
@@ -157,6 +174,8 @@ impl Theme {
             Theme::Default => "Default",
             Theme::Knight => "Knight",
             Theme::NieR => "NieR",
+            Theme::Echidna => "Echidna",
+            Theme::Solarized => "Solarized",
         }
     }
 }
